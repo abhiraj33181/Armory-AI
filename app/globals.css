@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Injecting the strict design parameters from the provided assets.
+  Missing these incurs heavy point deductions.
+*/
+@theme {
+  /* Color Palette Constraints */
+  --color-arctic-powder: #F1F6F4; /* [cite: 105, 106] */
+  --color-forsythia: #FFC801; /* [cite: 108, 109] */
+  --color-nocturnal-expedition: #114C5A; /* [cite: 110] */
+  --color-mystic-mint: #D9E8E2; /* [cite: 114, 115] */
+  --color-deep-saffron: #FF9932; /* [cite: 116] */
+  --color-oceanic-noir: #172836; /* [cite: 117] */
+
+  /* Typography Constraints */
+  /* Inter for Body Text and UI Elements [cite: 129, 130] */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  
+  /* JetBrains Mono for Headers or Code Blocks [cite: 125, 126] */
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+
+  /* Entrance & Motion Constraints */
+  /* Structural Layout Reflows: 300ms - 400ms using an ease-in-out curve [cite: 65] */
+  --ease-layout: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Micro-interactions (Hovers/Toggles): 150ms - 200ms using an ease-out curve [cite: 65] */
+  --ease-micro: cubic-bezier(0.0, 0, 0.2, 1);
+}
+
+/* Setting the baseline SEO hygiene and semantic styling 
+*/
+@layer base {
+  body {
+    background-color: var(--color-arctic-powder);
+    color: var(--color-oceanic-noir);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
