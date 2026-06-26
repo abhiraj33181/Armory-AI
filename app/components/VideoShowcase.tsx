@@ -4,7 +4,7 @@ import { Play, Clock, X, Shield, Radio, Activity } from 'lucide-react';
 
 export default function VideoShowcase() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const sectionRef = useRef<HTMLSectionElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const followerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const timestampRef = useRef<HTMLSpanElement>(null);
